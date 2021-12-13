@@ -20,18 +20,18 @@ class MyApp extends StatelessWidget {
             onPressed: () {},
           ),
         ),
-        body: ListOfChats(),
+        body: const ListOfChats(),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.deepOrangeAccent,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: () {},
         ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(Icons.home)),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: 'Delete',
               icon: Icon(Icons.delete))
         ],
@@ -48,15 +48,15 @@ class ListOfChats extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         itemCount: 10,
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (context, index) {
       return GestureDetector(
         onTap: () {print('$index');},
           child: Container(
             color: index % 2 == 0 ? Colors.green : Colors.red,
             child: Row(
               children: [
-                CircleAvatar(
-                  //backgroundImage: ,
+                const CircleAvatar(
+
                 )
               ],
             ),
